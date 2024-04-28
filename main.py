@@ -44,7 +44,7 @@ def home():
     enhanced_poem = ""
     if request.method == 'POST':
         poem = request.form.get('poem', '')
-        if poem.strip():  # Make sure poem is not empty
+        if poem.strip(): 
             enhanced_poem = emoji_enhance_poem(poem)
   
     return render_template('index.html', enhanced_poem=enhanced_poem)
