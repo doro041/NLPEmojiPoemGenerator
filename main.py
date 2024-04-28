@@ -14,7 +14,7 @@ emoji_tokenizer = T5Tokenizer.from_pretrained(emoji_model_path)
 emoji_generator = T5ForConditionalGeneration.from_pretrained(emoji_model_path)
 
 def generate_emojis(text):
-    # Corrected the function call here
+    
     inputs = emoji_tokenizer.encode("translate into emojis: " + text, return_tensors="pt", padding=True, truncation=True)
     outputs = emoji_generator.generate(inputs, max_length=50, num_beams=4, early_stopping=True)
     return emoji_tokenizer.decode(outputs[0], skip_special_tokens=True).replace(" ", "")
@@ -46,7 +46,7 @@ def home():
         poem = request.form.get('poem', '')
         if poem.strip():  # Make sure poem is not empty
             enhanced_poem = emoji_enhance_poem(poem)
-    # Use the same template for GET and POST
+  
     return render_template('index.html', enhanced_poem=enhanced_poem)
 
 if __name__ == "__main__":
