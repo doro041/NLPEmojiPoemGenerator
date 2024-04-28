@@ -13,5 +13,5 @@ NLPEmojiPoemGenerator is an interactive tool that enhances written poems with em
 ## Installation
 
 Clone the repository:
-git clone https://github.com/yourusername/NLPEmojiPoemGenerator.git
+git clone https://github.com/doro041/NLPEmojiPoemGenerator/
 cd NLPEmojiPoemGenerator
